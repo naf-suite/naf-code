@@ -23,8 +23,13 @@ module.exports = appInfo => {
 
   // mongoose config
   config.mongoose = {
-    url: 'mongodb://root:Ziyouyanfa%23%40!@localhost:27017/naf?authSource=admin',
-    options: {},
+    // url: 'mongodb://root:Ziyouyanfa%23%40!@localhost:27017/naf?authSource=admin',
+    url: 'mongodb://localhost:27017/naf?authSource=admin',
+    options: {
+      user: 'root',
+      pass: 'Ziyouyanfa#@!',
+      authSource: 'admin',
+    },
   };
 
   config.logger = {

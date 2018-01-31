@@ -7,6 +7,7 @@
     "framework": "naf-framework-mongoose"
   },
   "dependencies": {
+    "mongoose": "^5.0.2",
     "naf-core": "^0.0.12",
     "naf-framework-mongoose": "^0.0.24"
   },
