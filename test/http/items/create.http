@@ -1,0 +1,11 @@
+#字典项
+##添加字典项
+POST http://localhost:7001/items/T01/create HTTP/1.1
+content-type: application/json
+Accept: application/json
+
+{
+    "code": "09",
+    "name": "其他",
+    "order": 0
+}

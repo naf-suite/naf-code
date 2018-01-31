@@ -1,0 +1,12 @@
+#字典类别
+##创建字典类别
+
+POST  http://localhost:7001/items/5a7049aa55b92f49d48332cc/update HTTP/1.1
+content-type: application/json
+Accept: application/json
+
+{
+    "code": "02",
+    "name": "正常1",
+    "order": 100
+}

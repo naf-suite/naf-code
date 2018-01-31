@@ -1,0 +1,5 @@
+#字典类别
+##删除字典类别
+POST http://localhost:7001/items/5a7048d80fa2357f607e76d6/delete HTTP/1.1
+content-type: application/json
+Accept: application/json

@@ -1,0 +1,4 @@
+
+GET http://localhost:7001/items/5a7049aa55b92f419d48332cc/fetch HTTP/1.1
+Accept: application/json
+

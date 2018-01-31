@@ -1,0 +1,28 @@
+{
+  "create": {
+    "params": ["category"],
+    "requestBody": ["code", "name", "order", "status"]
+  },
+  "delete": {
+    "params": ["category"],
+    "query": ["code"]
+  },
+  "update": {
+    "parameters": {
+      "params": ["category"],
+      "query": ["code"]
+    },
+    "requestBody": ["name", "order", "status"]
+  },
+  "list": {
+    "params": ["category"],
+    "service": "query",
+    "options": {
+      "sort": {"order": -1, "code": 1}
+    }
+  },
+  "fetch": {
+    "params": ["category"],
+    "query": ["code"]
+  }
+}
