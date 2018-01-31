@@ -1,6 +1,6 @@
 #字典类别
 ##创建字典类别
-POST http://localhost:7001/category/create HTTP/1.1
+POST http://localhost:8001/category/create HTTP/1.1
 content-type: application/json
 Accept: application/json
 

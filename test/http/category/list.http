@@ -1,4 +1,4 @@
 
-GET http://localhost:7001/category/list HTTP/1.1
+GET http://localhost:8001/category/list HTTP/1.1
 Accept: application/json
 
