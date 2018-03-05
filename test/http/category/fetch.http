@@ -1,4 +1,4 @@
 
-GET http://localhost:7001/category/5a7043a48e71983e403f6c3a/fetch HTTP/1.1
+GET http://localhost:7001/category/fetch?_id=5a72371b3a4874300450c88c HTTP/1.1
 Accept: application/json
 

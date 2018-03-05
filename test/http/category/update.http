@@ -1,7 +1,7 @@
 #字典类别
 ##创建字典类别
 
-POST  http://localhost:7001/category/5a6ff7cfde8bc532d85a6c92/update HTTP/1.1
+POST  http://localhost:7001/category/update?_id=5a72371b3a4874300450c88c HTTP/1.1
 content-type: application/json
 Accept: application/json
 

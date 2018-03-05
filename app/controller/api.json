@@ -1,0 +1,9 @@
+{
+  "list": {
+    "params": ["category", "group"],
+    "service": "query",
+    "options": {
+      "sort": {"order": -1, "code": 1}
+    }
+  }
+}
