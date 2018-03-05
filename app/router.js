@@ -21,8 +21,9 @@ module.exports = app => {
 
   // 字典项
   router.get('/items/:category/list', controller.items.list);
-  router.get('/items/fetch', controller.items.fetch);
+  router.get('/items/:category/fetch', controller.items.fetch);
   router.post('/items/:category/create', controller.items.create);
   router.post('/items/:category/update', controller.items.update);
   router.post('/items/:category/delete', controller.items.delete);
+  router.post('/items/:category/clear', controller.items.clear);
 };

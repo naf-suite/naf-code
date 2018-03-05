@@ -1,34 +1,45 @@
 'use strict';
 
-const ObjectID = require('mongodb').ObjectID;
 const assert = require('assert');
-const util = require('core-util-is');
+const { isNullOrUndefined } = require('naf-core').Util;
 const { BusinessError, ErrorCode } = require('naf-core').Error;
-const service = require('naf-framework-mongoose').service;
-const { CrudService } = service;
+const { CrudService } = require('naf-framework-mongoose').Services;
 
 class CategoryService extends CrudService {
   constructor(ctx) {
     super(ctx, 'naf_code_category');
     this.model = ctx.model.Category;
-    this.mItems = ctx.model.Items;
+    this.mItems = this._model(ctx.model.Items);
+    this.mCategory = this._model(ctx.model.Category);
   }
 
-  async delete({ id }) {
-    assert(id);
+  async delete({ code }) {
+    assert(code, 'code不能为空');
 
     // TODO:检查数据是否存在
-    const entity = await this._findOne({ _id: ObjectID(id) });
-    if (util.isNullOrUndefined(entity)) throw new BusinessError(ErrorCode.DATA_NOT_EXIST);
+    const entity = await this.mCategory._findOne({ code });
+    if (isNullOrUndefined(entity)) throw new BusinessError(ErrorCode.DATA_NOT_EXIST);
 
     // TODO: 检查是否包含字典项数据
-    const count = await this._count({ category: entity.code }, this.mItems);
+    const count = await this.mItems._count({ category: entity.code });
     if (count > 0) {
       throw new BusinessError(ErrorCode.SERVICE_FAULT, '存在字典项数据，不能删除');
     }
 
-    await this._remove({ _id: ObjectID(id) });
+    await this.mCategory._remove({ _id: entity._id });
     return 'deleted';
+  }
+
+  async clear({ category }) {
+    assert(category, 'category不能为空');
+
+    // TODO:检查数据是否存在
+    const entity = await this.mCategory._findOne({ code: category });
+    if (isNullOrUndefined(entity)) throw new BusinessError(ErrorCode.DATA_NOT_EXIST);
+
+    // TODO: 删除字典项数据
+    await this.mItems._remove({ category: entity.code });
+    return 'cleared';
   }
 
   // async query({ skip, limit, order } = {}, data = {}) {

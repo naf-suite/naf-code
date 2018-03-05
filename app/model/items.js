@@ -5,9 +5,9 @@ const SchemaDefine = {
   code: { type: String, required: true, maxLength: 64 },
   name: { type: String, required: true, maxLength: 128 },
   category: { type: String, required: true, maxLength: 64 }, // 字典类别
-  group: { type: String, required: true, maxLength: 64 }, // 数据子类/分组
-  order: Number,
-  status: { type: String, maxLength: 64 },
+  group: { type: String, required: false, maxLength: 64, default: '0' }, // 数据子类/分组
+  status: { type: String, maxLength: 64, default: '0' },
+  order: { type: Number, default: 0 },
 };
 const schema = new Schema(SchemaDefine);
 schema.index({ code: 1 });

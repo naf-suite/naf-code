@@ -1,4 +1,0 @@
-
-GET http://localhost:7001/items/T01/list HTTP/1.1
-Accept: application/json
-

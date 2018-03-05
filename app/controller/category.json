@@ -3,10 +3,10 @@
     "requestBody": ["code","name","order"]
   },
   "delete": {
-    "query": ["_id"]
+    "query": ["code"]
   },
   "update": {
-    "query": ["_id"],
+    "query": ["code"],
     "requestBody": ["name","order"]
   },
   "list": {
@@ -17,6 +17,6 @@
     }
   },
   "fetch": {
-    "query": ["_id"]
+    "query": ["code"]
   }
 }

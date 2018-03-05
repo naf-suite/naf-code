@@ -1,0 +1,50 @@
+###字典类别
+# 创建字典类别
+#POST http://localhost:8001/category/create HTTP/1.1
+POST http://oa.chinahuian.cn/naf/code/category/create HTTP/1.1
+content-type: application/json
+Accept: application/json
+
+{
+    "code": "T01",
+    "name": "用户状态",
+    "order": 0
+}
+
+###
+# 删除字典类别
+POST http://localhost:7001/category/delete?code=T01 HTTP/1.1
+content-type: application/json
+Accept: application/json
+
+###
+# 清空字典数据
+GET http://localhost:7001/items/T01/clear HTTP/1.1
+content-type: application/json
+Accept: application/json
+
+
+###
+# fetch
+GET http://localhost:7001/category/fetch?_id=5a72371b3a4874300450c88c HTTP/1.1
+Accept: application/json
+
+
+
+###
+# list
+GET http://localhost:7001/category/list HTTP/1.1
+Accept: application/json
+
+
+###
+# 修改字典类别
+POST  http://localhost:7001/category/update?_id=5a72371b3a4874300450c88c HTTP/1.1
+content-type: application/json
+Accept: application/json
+
+{
+    "code": "T01",
+    "name": "用户状态",
+    "order": 1
+}

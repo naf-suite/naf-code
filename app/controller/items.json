@@ -1,7 +1,7 @@
 {
   "create": {
     "params": ["category"],
-    "requestBody": ["code", "name", "order", "status"]
+    "requestBody": ["code", "name", "group", "order", "status"]
   },
   "delete": {
     "params": ["category"],
@@ -12,10 +12,13 @@
       "params": ["category"],
       "query": ["code"]
     },
-    "requestBody": ["name", "order", "status"]
+    "requestBody": ["name", "group", "order", "status"]
   },
   "list": {
-    "params": ["category"],
+    "parameters": {
+      "params": ["category"],
+      "query": ["group", "status"]
+    },
     "service": "query",
     "options": {
       "sort": {"order": -1, "code": 1}
@@ -24,5 +27,12 @@
   "fetch": {
     "params": ["category"],
     "query": ["code"]
+  },
+  "clear": {
+    "params": ["category"],
+    "service": { 
+      "name": "category",
+      "func": "clear"
+    }
   }
 }
