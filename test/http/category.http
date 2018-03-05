@@ -1,13 +1,13 @@
 ###字典类别
 # 创建字典类别
-#POST http://localhost:8001/category/create HTTP/1.1
-POST http://oa.chinahuian.cn/naf/code/category/create HTTP/1.1
+POST http://localhost:7001/category/create HTTP/1.1
+#POST http://oa.chinahuian.cn/naf/code/category/create HTTP/1.1
 content-type: application/json
 Accept: application/json
 
 {
-    "code": "T01",
-    "name": "用户状态",
+    "code": "31",
+    "name": "行政区划",
     "order": 0
 }
 
@@ -39,12 +39,11 @@ Accept: application/json
 
 ###
 # 修改字典类别
-POST  http://localhost:7001/category/update?_id=5a72371b3a4874300450c88c HTTP/1.1
+POST  http://localhost:7001/category/update?code=31 HTTP/1.1
+#POST  http://oa.chinahuian.cn/naf/code/category/update?code=31 HTTP/1.1
 content-type: application/json
 Accept: application/json
 
 {
-    "code": "T01",
-    "name": "用户状态",
-    "order": 1
+    "key": "xzqh"
 }

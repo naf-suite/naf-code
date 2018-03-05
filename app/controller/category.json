@@ -1,19 +1,21 @@
 {
   "create": {
-    "requestBody": ["code","name","order"]
+    "requestBody": ["code","name","order", "key"]
   },
   "delete": {
     "query": ["code"]
   },
   "update": {
-    "query": ["code"],
-    "requestBody": ["name","order"]
+    "parameters": {
+      "query": ["code"]
+    },
+    "requestBody": ["name","order", "key"]
   },
   "list": {
     "parameters": {},
     "service": "query",
     "options": {
-      "sort": ["order", "code"]
+      "sort": {"order": -1, "code": 1}
     }
   },
   "fetch": {
