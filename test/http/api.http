@@ -1,10 +1,21 @@
 ###
-# 按类型检索
-#GET http://localhost:7001/code/31/list HTTP/1.1
-GET http://oa.chinahuian.cn/naf/code/31/list HTTP/1.1
+# 按类型检索list
+GET http://localhost:7001/code/32/list HTTP/1.1
+#GET http://oa.chinahuian.cn/naf/code/mz/list HTTP/1.1
 Accept: application/json
 
 ###
-# 按类型和分组检索
+# 按类型和分组检索list
 GET http://localhost:7001/code/T01/0/list HTTP/1.1
+Accept: application/json
+
+###
+# 按类型检索fetch
+GET http://localhost:7001/code/32/fetch?code=1 HTTP/1.1
+#GET http://oa.chinahuian.cn/naf/code/mz/fetch?code=1 HTTP/1.1
+Accept: application/json
+
+###
+# 按类型和分组检索fetch
+GET http://localhost:7001/code/T01/0/fetch?code=0 HTTP/1.1
 Accept: application/json

@@ -6,8 +6,9 @@ content-type: application/json
 Accept: application/json
 
 {
-    "code": "31",
-    "name": "行政区划",
+    "code": "32",
+    "name": "民族",
+    "key": "mz",
     "order": 0
 }
 
@@ -39,8 +40,8 @@ Accept: application/json
 
 ###
 # 修改字典类别
-POST  http://localhost:7001/category/update?code=31 HTTP/1.1
-#POST  http://oa.chinahuian.cn/naf/code/category/update?code=31 HTTP/1.1
+#POST  http://localhost:7001/category/update?code=31 HTTP/1.1
+POST  http://oa.chinahuian.cn/naf/code/category/update?code=31 HTTP/1.1
 content-type: application/json
 Accept: application/json
 

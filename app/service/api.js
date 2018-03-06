@@ -20,10 +20,21 @@ class ApiService extends CrudService {
     if (isNullOrUndefined(c)) {
       throw new BusinessError(ErrorCode.DATA_NOT_EXIST, '字典类别不存在');
     }
-    const rs = await this.mItems._find({ category: c.code, group }, { code: 1, name: 1 }, { sort: { order: -1, code: 1 } });
-    return rs;
+    const rs = await this.mItems._find({ category: c.code, group }, { code: 1, name: 1, _id: -1 }, { sort: { order: -1, code: 1 } });
+    return rs.map(p => ({ code: p.code, name: p.name }));
   }
 
+  async fetch({ category, group, code } = {}) {
+    assert(category, 'category不能为空');
+    assert(code, 'code不能为空');
+    // const rs = await this._find(trimData(data), null, trimData({ skip, limit, sort: order && { [order]: 1 } }));
+    const c = await this.mCategory._findOne({ $or: [{ code: category }, { key: category }] });
+    if (isNullOrUndefined(c)) {
+      throw new BusinessError(ErrorCode.DATA_NOT_EXIST, '字典类别不存在');
+    }
+    const rs = await this.mItems._findOne({ category: c.code, group, code }, { code: 1, name: 1, _id: -1 });
+    return rs;
+  }
 }
 
 module.exports = ApiService;

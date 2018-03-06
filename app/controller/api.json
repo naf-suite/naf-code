@@ -5,5 +5,9 @@
     "options": {
       "sort": {"order": -1, "code": 1}
     }
+  },
+  "fetch": {
+    "params": ["category", "group"],
+    "query": ["code"]
   }
 }

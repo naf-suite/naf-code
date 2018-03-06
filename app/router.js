@@ -11,6 +11,8 @@ module.exports = app => {
   // 开放接口
   router.get('/code/:category/list', controller.api.list);
   router.get('/code/:category/:group/list', controller.api.list);
+  router.get('/code/:category/fetch', controller.api.fetch);
+  router.get('/code/:category/:group/fetch', controller.api.fetch);
 
   // 字典分类
   router.get('/category/list', controller.category.list);
