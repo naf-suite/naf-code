@@ -17,5 +17,17 @@ Accept: application/json
 
 ###
 # 按类型和分组检索fetch
-GET http://localhost:7001/code/T01/0/fetch?code=0 HTTP/1.1
+GET http://localhost:7001/code/01/0/fetch?code=0 HTTP/1.1
+Accept: application/json
+
+###
+# 获取省列表
+#GET http://localhost:7001/code/xzqh/list?parent=000000&level=1 HTTP/1.1
+GET http://oa.chinahuian.cn/naf/code/xzqh/list?parent=000000&level=1 HTTP/1.1
+Accept: application/json
+
+###
+# 获取市列表
+#GET http://localhost:7001/code/xzqh/list?parent=220000&level=2 HTTP/1.1
+GET http://oa.chinahuian.cn/naf/code/xzqh/list?parent=220000&level=2 HTTP/1.1
 Accept: application/json

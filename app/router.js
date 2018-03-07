@@ -9,6 +9,7 @@ module.exports = app => {
   router.all('/demo', controller.home.demo);
 
   // 开放接口
+  router.get('/code/xzqh/list', controller.api.xzqh);
   router.get('/code/:category/list', controller.api.list);
   router.get('/code/:category/:group/list', controller.api.list);
   router.get('/code/:category/fetch', controller.api.fetch);

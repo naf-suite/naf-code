@@ -9,5 +9,8 @@
   "fetch": {
     "params": ["category", "group"],
     "query": ["code"]
+  },
+  "xzqh": {
+    "query": ["parent", "level"]
   }
 }
