@@ -10,7 +10,7 @@
     "mongodb": "^3.1.4",
     "mongoose": "^5.2.12",
     "naf-core": "^0.0.21",
-    "naf-framework-mongoose": "^0.3.16",
+    "naf-framework-mongoose": "^0.3.17",
     "xlsx": "^0.13.5"
   },
   "devDependencies": {
