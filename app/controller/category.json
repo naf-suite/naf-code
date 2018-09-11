@@ -1,6 +1,6 @@
 {
   "create": {
-    "requestBody": ["code","name","order", "key"]
+    "requestBody": ["code","name","order"]
   },
   "delete": {
     "query": ["code"]
@@ -9,7 +9,7 @@
     "parameters": {
       "query": ["code"]
     },
-    "requestBody": ["name","order", "key"]
+    "requestBody": ["name","order"]
   },
   "list": {
     "parameters": {},

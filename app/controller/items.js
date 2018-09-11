@@ -2,7 +2,7 @@
 
 const Controller = require('egg').Controller;
 const meta = require('./items.json');
-const { CrudController } = require('naf-framework-mongoose').controller;
+const { CrudController } = require('naf-framework-mongoose/lib/controller');
 
 class ItemsController extends Controller {
   constructor(ctx) {
