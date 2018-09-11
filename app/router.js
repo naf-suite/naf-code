@@ -20,13 +20,13 @@ module.exports = app => {
   router.get('/category/fetch', controller.category.fetch);
   router.post('/category/create', controller.category.create);
   router.post('/category/update', controller.category.update);
-  router.post('/category/delete', controller.category.delete);
+  router.get('/category/delete', controller.category.delete);
 
   // 字典项
   router.get('/items/:category/list', controller.items.list);
   router.get('/items/:category/fetch', controller.items.fetch);
   router.post('/items/:category/create', controller.items.create);
   router.post('/items/:category/update', controller.items.update);
-  router.post('/items/:category/delete', controller.items.delete);
-  router.post('/items/:category/clear', controller.items.clear);
+  router.get('/items/:category/delete', controller.items.delete);
+  router.get('/items/:category/clear', controller.items.clear);
 };

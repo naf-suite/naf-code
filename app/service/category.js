@@ -26,7 +26,7 @@ class CategoryService extends CrudService {
       throw new BusinessError(ErrorCode.SERVICE_FAULT, '存在字典项数据，不能删除');
     }
 
-    await this.mCategory.remove({ _id: entity._id }).exec();
+    await this.mCategory.deleteOne({ _id: entity._id }).exec();
     return 'deleted';
   }
 
@@ -38,7 +38,7 @@ class CategoryService extends CrudService {
     if (isNullOrUndefined(entity)) throw new BusinessError(ErrorCode.DATA_NOT_EXIST);
 
     // TODO: 删除字典项数据
-    await this.mItems.remove({ category: entity.code }).exec();
+    await this.mItems.deleteMany({ category: entity.code }).exec();
     return 'cleared';
   }
 

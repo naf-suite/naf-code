@@ -32,7 +32,7 @@ class ItemsService extends CrudService {
     assert(category, 'category不能为空');
     assert(code, 'code不能为空');
 
-    await this.mItems.remove({ category, code }).exec();
+    await this.mItems.deleteOne({ category, code }).exec();
     return 'deleted';
   }
 
