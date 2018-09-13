@@ -7,7 +7,7 @@
     "framework": "naf-framework-mongoose"
   },
   "dependencies": {
-    "naf-framework-mongoose": "^0.3.23",
+    "naf-framework-mongoose": "^0.3.24",
     "xlsx": "^0.14.0"
   },
   "devDependencies": {
