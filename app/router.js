@@ -9,11 +9,11 @@ module.exports = app => {
   router.all('/demo', controller.home.demo);
 
   // 开放接口
-  router.get('/code/xzqh/list', controller.api.xzqh);
-  router.get('/code/:category/list', controller.api.list);
-  router.get('/code/:category/:group/list', controller.api.list);
-  router.get('/code/:category/fetch', controller.api.fetch);
-  router.get('/code/:category/:group/fetch', controller.api.fetch);
+  router.get('/api/xzqh/list', controller.api.xzqh);
+  router.get('/api/:category/list', controller.api.list);
+  router.get('/api/:category/:group/list', controller.api.list);
+  router.get('/api/:category/fetch', controller.api.fetch);
+  router.get('/api/:category/:group/fetch', controller.api.fetch);
 
   // 字典分类
   router.get('/category/list', controller.category.list);
