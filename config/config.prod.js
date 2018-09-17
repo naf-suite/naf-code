@@ -6,7 +6,18 @@ module.exports = () => {
   // add your config here
   config.cluster = {
     listen: {
-      port: 8001,
+      port: 8002,
+    },
+  };
+
+  // mongoose config
+  config.mongoose = {
+    url: 'mongodb://localhost:27018/naf',
+    options: {
+      useNewUrlParser: true,
+      user: 'root',
+      pass: 'Ziyouyanfa#@!',
+      authSource: 'admin',
     },
   };
 
