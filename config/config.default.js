@@ -23,6 +23,7 @@ module.exports = appInfo => {
       user: 'root',
       pass: 'Ziyouyanfa#@!',
       authSource: 'admin',
+      useCreateIndex: true,
     },
   };
 

@@ -4,6 +4,7 @@ const Schema = require('mongoose').Schema;
 const SchemaDefine = {
   code: { type: String, required: true, maxLength: 64 },
   name: { type: String, required: true, maxLength: 128 },
+  key: { type: String, required: true, maxLength: 64 },
   order: Number,
 };
 const schema = new Schema(SchemaDefine);

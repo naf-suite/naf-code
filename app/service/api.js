@@ -2,8 +2,9 @@
 
 const assert = require('assert');
 const { CrudService } = require('naf-framework-mongoose/lib/service');
-const { isNullOrUndefined, isNumber } = require('naf-core').Util;
+const { isNullOrUndefined } = require('naf-core').Util;
 const { BusinessError, ErrorCode } = require('naf-core').Error;
+const _ = require('lodash');
 
 class ApiService extends CrudService {
   constructor(ctx) {
@@ -27,7 +28,7 @@ class ApiService extends CrudService {
   async xzqh({ parent, level } = {}) {
     assert(isNullOrUndefined(parent) || /^\d{6}$/.test(parent), 'parent必须为有效的行政区划代码');
     assert(level, 'level不能为空');
-    if (!isNumber(level)) level = Number(level);
+    if (!_.isNumber(level)) level = Number(level);
     assert(level >= 0 && level <= 3, 'level只能为0~3的数字');
 
     const filter = { category: '31' };
