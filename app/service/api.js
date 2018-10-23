@@ -2,7 +2,7 @@
 
 const assert = require('assert');
 const { CrudService } = require('naf-framework-mongoose/lib/service');
-const { isNullOrUndefined } = require('naf-core').Util;
+const { isNullOrUndefined, trimData } = require('naf-core').Util;
 const { BusinessError, ErrorCode } = require('naf-core').Error;
 const _ = require('lodash');
 
@@ -21,7 +21,7 @@ class ApiService extends CrudService {
     if (isNullOrUndefined(c)) {
       throw new BusinessError(ErrorCode.DATA_NOT_EXIST, '字典类别不存在');
     }
-    const rs = await this.mItems.find({ category: c.code, group }, { code: 1, name: 1, _id: -1 }, { sort: { order: -1, code: 1 } }).exec();
+    const rs = await this.mItems.find(trimData({ category: c.code, group }), { code: 1, name: 1, _id: -1 }, { sort: { order: -1, code: 1 } }).exec();
     return rs.map(p => ({ code: p.code, name: p.name }));
   }
 
