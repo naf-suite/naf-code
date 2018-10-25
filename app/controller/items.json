@@ -21,7 +21,9 @@
     },
     "service": "query",
     "options": {
-      "sort": {"order": -1, "code": 1}
+      "sort": {"order": -1, "code": 1},
+      "query": ["skip", "limit"],
+      "count": true
     }
   },
   "fetch": {
