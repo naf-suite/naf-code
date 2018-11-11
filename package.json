@@ -7,7 +7,7 @@
     "framework": "naf-framework-mongoose"
   },
   "dependencies": {
-    "naf-framework-mongoose": "^0.5.1",
+    "naf-framework-mongoose": "^0.5.3",
     "xlsx": "^0.14.0"
   },
   "devDependencies": {
@@ -34,7 +34,9 @@
     "lint": "eslint .",
     "ci": "npm run lint && npm run cov",
     "autod": "autod",
-    "pm2": "pm2 start server.js --name=naf-code"
+    "pm2": "pm2 start server.js --name=naf-code",
+    "restart": "pm2 restart naf-code"
+
   },
   "ci": {
     "version": "8"
