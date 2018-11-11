@@ -36,7 +36,6 @@
     "autod": "autod",
     "pm2": "pm2 start server.js --name=naf-code",
     "restart": "pm2 restart naf-code"
-
   },
   "ci": {
     "version": "8"
