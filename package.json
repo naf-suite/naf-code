@@ -35,7 +35,7 @@
     "lint": "eslint .",
     "ci": "npm run lint && npm run cov",
     "autod": "autod",
-    "pm2": "pm2 start server.js --name=naf-code",
+    "pm2": "pm2 start",
     "restart": "pm2 restart naf-code"
   },
   "ci": {
