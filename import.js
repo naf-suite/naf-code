@@ -7,7 +7,8 @@ const MongoClient = require('mongodb').MongoClient;
 
 // Connection URL
 // const url = 'mongodb://root:Ziyouyanfa%23%40!@localhost:27017';
-const url = 'mongodb://root:Ziyouyanfa%23%40!@192.168.18.100:27018';
+// const url = 'mongodb://root:Ziyouyanfa%23%40!@192.168.18.100:27018';
+const url = 'mongodb://root:Ziyouyanfa%23%40!@192.168.1.170:27018';
 
 // Database Name
 const dbName = 'naf';
