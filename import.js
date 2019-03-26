@@ -47,7 +47,7 @@ async function doWork() {
   console.log(`共读取数据${lines.length}条!`);
   console.log('正在保存数据...');
   // Use connect method to connect to the Server
-  const client = await MongoClient.connect(url, { poolSize: 10 });
+  const client = await MongoClient.connect(url, { poolSize: 10, useNewUrlParser: true });
   const db = client.db(dbName).collection('naf_code_items');
   let count = 0;
   for (let i = 0; i < lines.length; i++) {
